@@ -1,0 +1,17 @@
+{
+    "plugins": ["wdio"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:wdio/recommended"
+    ],
+    "pareserOptions": {
+        "ecmaVersions" : "latest",
+        "sourceType": "module"
+
+    },
+    "env": {
+        "es6": true,
+        "mocha": true,
+        "node": true
+    }
+}
