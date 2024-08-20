@@ -23,12 +23,24 @@ export const config = {
     //
     specs: [
         // ToDo: define location for spec files here
-        './test/specs/**/contact.js'
+        // To run selected files - npx wdio --spec test/specs/home.js
+        './test/specs/**/*.js'
     ],
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
+        // Example of exclude - './test/specs/**/nav.js' OR npx wdio --exclude test/specs/nav.js
     ],
+    // Define suites. For run - npx wdio --suite smoke --suite component
+    suites: { 
+        smoke: [
+            './test/specs/**/contact.js',
+            './test/specs/**/home.js'
+        ],
+        component: [
+            './test/specs/**/nav.js'
+        ]
+    },
     //
     // ============
     // Capabilities
@@ -53,7 +65,10 @@ export const config = {
     //
     capabilities: [{
         browserName: 'chrome'
-    }],
+    },
+    /*{
+        browserName: 'firefox'
+    }*/],
 
     //
     // ===================
