@@ -1,5 +1,5 @@
 class BlogPage {
-    open () {
+    async open () {
         return browser.url('/blog')
     }
 

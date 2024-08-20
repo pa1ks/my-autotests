@@ -12,12 +12,12 @@ describe('Blog page', () => {
 
         for (const post of posts) {
             const postText = await post.getText()
-            await expect(postText.length).toBeGreaterThan(10);
+            expect(postText.length).toBeGreaterThan(10);
         }
 
         // Assert the total length is 5
 
-        await expect(posts).toHaveLength(5)
+        await expect(posts).toBeElementsArrayOfSize(5)
 
     })
 })
