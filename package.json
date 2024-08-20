@@ -1,6 +1,5 @@
 {
   "name": "my-new-project",
-  "type": "module",
   "devDependencies": {
     "@babel/cli": "^7.24.8",
     "@babel/core": "^7.25.2",

@@ -1,5 +1,5 @@
 class ContactPage {
-    open () {
+    async open () {
         return browser.url('/contact')
     }
 
