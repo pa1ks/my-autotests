@@ -1,7 +1,7 @@
 import NavComponent from "./components/nav-comp.js"
 
 class HomePage {
-    open () {
+    async open () {
         return browser.url('/')
     }
 

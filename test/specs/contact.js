@@ -1,7 +1,7 @@
-import ContactPage from "../pages/contact-page.js"
-import { faker } from ('@faker-js/faker')
+import ContactPage from "../pages/contact-page"
+import { faker } from '@faker-js/faker'
 
-desсribe('Contact page', () => {
+describe('Contact page', () => {
     it('Fill all input fields, press submit button & assert the succes message', async () => {
         await ContactPage.open()
 
@@ -28,7 +28,7 @@ desсribe('Contact page', () => {
         await ContactPage.btnSubmit.click()*/
 
         //await ContactPage.submitForm('Pavlo', 'test@test.com', '+6666666666', 'Message')
-        await ContactPage.submitForm(faker.person.firstName(), faker.internet.email(), faker.phone.phoneNumber(), faker.lorem.paragraphs(2))
+        await ContactPage.submitForm(faker.person.firstName(), faker.internet.email(), faker.phone.number(), faker.lorem.paragraphs(2))
 
         const successAlert = ContactPage.successMsg
         
