@@ -2,6 +2,7 @@
 // https://practice.sdetunicorns.com/
 
 import HomePage from '../pages/home-page.js'
+import allureReporter from '@wdio/allure-reporter'
 
 describe('Home', () => {
 
@@ -26,6 +27,7 @@ describe('Home', () => {
 
     it('Open URL & assert title', async () => {
         //Assert title
+        allureReporter.addSeverity('minor')
         await expect(browser).toHaveTitle('Practice E-Commerce Site – SDET Unicorns')
     })
 
@@ -50,6 +52,8 @@ describe('Home', () => {
     })
 
     it('Click on logo button & assert URL doesnt contains get started text', async () => {
+        allureReporter.addFeature('Logo verification')
+        
         // Open get started page
         await browser.url('https://practice.sdetunicorns.com/#get-started')
 
